@@ -74,14 +74,15 @@ export default function Home() {
                         <option value='originals'>Originals</option>
                         <option value='created'>Created</option>
                     </select>
+       
                     <Paginate pokemonsPerPage={pokemonsPerPage} allPokemons={allPokemons.length} paginate={paginate} />
                     {currentPokemons?.map((e) => {
                         return (
-                            <fragment>
+                            <div>
                                 <Link to={'/home' + e.id}>
                                     <PokemonCard name={e.name} image={e.image} types={e.types} />
                                 </Link>
-                            </fragment>
+                            </div>
                         )
                     })}
                 </div>

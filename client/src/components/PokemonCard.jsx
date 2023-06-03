@@ -4,7 +4,7 @@ import './PokemonCard.css';
 export default function PokemonCard({name, types, image}) {
     return (
         <div className="stylesCard">
-            <h3 className="name">{name.charAt(0).toUpperCase() + name.slice(1)}</h3>
+            <h3 className="name">{name}</h3>
             <img src={image} alt={name} width='120px' height='120px' />
             <ul className="typeStyle">
                 <li className="type">
